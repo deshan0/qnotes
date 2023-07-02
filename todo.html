@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" style="text-decoration: none;"><h1><img src="images/notes.png" alt="">Q:otes</h1></a>
+        <ul>
+            <li><a href="todo.html">TODO</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+        </ul>
+        <img src="images/dark theme icon/moon.png" alt="" id="icon">
+    </nav>
+
+    <div class="container">
+        <div class="to-do">
+            <h2>To-Do List <img src="images/icon.png" alt=""></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>

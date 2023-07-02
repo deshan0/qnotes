@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: linear-gradient(135deg, #153677, #4e085f);
+    --secondary-color: white;
+    --text-color: #333
+}
+
+.dark-theme {
+    --primary-color: linear-gradient(135deg, #333, #4e4e4e);
+    --secondary-color: #212121;
+    --text-color: white;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--primary-color);
+    color: white;
+    padding-top: 4%;
+    padding-left: 10%;
+}
+
+body {
+    background: var(--secondary-color);
+}
+
+/* Nav Bar */
+nav h1 {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--text-color);
+
+}
+
+nav h1 img {
+    width: 60px;
+}
+
+nav {
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav ul li a :hover {
+    color: #8f20f6;
+}
+
+#icon {
+    width: 30px;
+    cursor: pointer;
+
+}
+
+/* Container area */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--primary-color);
+    padding: 10px;
+}
+
+.to-do {
+    width: 100%;
+    max-width: 540px;
+    background: var(--secondary-color);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+
+}
+
+.to-do h2 {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.to-do h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    background: #ff5945;
+    border-radius: 100px;
+    box-shadow: rgba(187, 113, 44, 0.2) 0 -25px 18px -14px inset,rgba(187, 113, 44, 0.2) 0 1px 2px,rgba(187, 113, 44, 0.2) 0 2px 4px,rgba(187, 113, 44, 0.2) 0 4px 8px,rgba(187, 113, 44, 0.2) 0 8px 16px,rgba(187, 113, 44, 0.2) 0 16px 32px;
+    color: #fff;
+    padding: 16px 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    
+}
+
+button:hover {
+    box-shadow: rgba(187, 113, 44, 0.3) 0 -25px 18px -14px inset,rgba(187, 113, 44, 0.3) 0 1px 2px,rgba(187, 113, 44, 0.3) 0 2px 4px,rgba(187, 113, 44, 0.3) 0 4px 8px,rgba(187, 113, 44, 0.3) 0 8px 16px,rgba(187, 113, 44, 0.3) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg
+    );
+  }
+
+#list-container li {
+    list-style: none;
+    color: var(--text-color);
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+/* To-do items */
+#list-container li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+#list-container li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+#list-container li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+#list-container li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#list-container li span:hover {
+    background: #edeef0;
+
+}
