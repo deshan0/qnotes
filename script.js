@@ -16,7 +16,7 @@ createBtn.addEventListener("click", ()=>{
     let img = document.createElement("img");
     inputBox.className = "input-box";
     inputBox.setAttribute("contenteditable", "true");
-    img.src = "images/delete.png";
+    img.src = "delete.png";
     notesContainer.appendChild(inputBox).appendChild(img);
 })
 
@@ -47,8 +47,8 @@ var icon = document.getElementById("icon")
 icon.onclick = function() {
     document.body.classList.toggle("dark-theme")
     if(document.body.classList.contains("dark-theme")){
-        icon.src = "images/dark theme icon/sun.png";
+        icon.src = "sun.png";
     } else {
-        icon.src = "images/dark theme icon/moon.png";
+        icon.src = "moon.png";
     }
 }
